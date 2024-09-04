@@ -19,6 +19,6 @@ class ProfileForm(ModelForm):
         model = Profile
         fields = ["biography", "avatar"]
         widgets = {
-            "biography": forms.Textarea(attrs={"class": "form-control bg-primary"}),
+            "biography": forms.Textarea(attrs={"class": "form-control"}),
             "avatar": forms.ClearableFileInput(attrs={"class": "form-control-file"}),
         }

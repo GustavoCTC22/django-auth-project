@@ -3,8 +3,15 @@
 <h2>{{ profile.user.username }}</h2>
 <p>{{ profile.biography }}</p>
 {% if profile.avatar %}
-<img class="rounded float-lef" src="{{ profile.avatar.url }}" alt="Avatar" />
+<img
+  width="100px"
+  height="100px"
+  class="rounded-circle"
+  src="{{ profile.avatar.url }}"
+  alt="Avatar"
+/>
 {% else %}
 <p>No avatar uploaded.</p>
 {% endif %}
-<a href="/profile/edit">Edit profile</a> {% endblock "content" %}
+<a class="btn btn-primary" href="/profile/edit">Edit profile</a> <br />
+{% endblock "content" %}
